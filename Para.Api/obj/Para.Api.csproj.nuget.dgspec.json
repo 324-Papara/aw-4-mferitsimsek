@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Api\\Para.Api.csproj": {}
+    "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Api\\Para.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Api\\Para.Api.csproj": {
+    "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Api\\Para.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Api\\Para.Api.csproj",
+        "projectUniqueName": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Api\\Para.Api.csproj",
         "projectName": "Para.Api",
-        "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Api\\Para.Api.csproj",
+        "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Api\\Para.Api.csproj",
         "packagesPath": "C:\\Users\\KAPTAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Api\\obj\\",
+        "outputPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KAPTAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -28,17 +28,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\Para.Base.csproj": {
-                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\Para.Base.csproj"
+              "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\Para.Base.csproj": {
+                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\Para.Base.csproj"
               },
-              "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Bussiness\\Para.Bussiness.csproj": {
-                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Bussiness\\Para.Bussiness.csproj"
+              "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Bussiness\\Para.Bussiness.csproj": {
+                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Bussiness\\Para.Bussiness.csproj"
               },
-              "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Data\\Para.Data.csproj": {
-                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Data\\Para.Data.csproj"
+              "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Data\\Para.Data.csproj": {
+                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Data\\Para.Data.csproj"
               },
-              "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Schema\\Para.Schema.csproj": {
-                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Schema\\Para.Schema.csproj"
+              "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Schema\\Para.Schema.csproj": {
+                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Schema\\Para.Schema.csproj"
               }
             }
           }
@@ -94,6 +94,10 @@
               "target": "Package",
               "version": "[8.0.4, )"
             },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.8.1, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.4.0, )"
@@ -122,14 +126,14 @@
         }
       }
     },
-    "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\Para.Base.csproj": {
+    "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\Para.Base.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\Para.Base.csproj",
+        "projectUniqueName": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\Para.Base.csproj",
         "projectName": "Para.Base",
-        "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\Para.Base.csproj",
+        "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\Para.Base.csproj",
         "packagesPath": "C:\\Users\\KAPTAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\obj\\",
+        "outputPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KAPTAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -204,14 +208,14 @@
         }
       }
     },
-    "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Bussiness\\Para.Bussiness.csproj": {
+    "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Bussiness\\Para.Bussiness.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Bussiness\\Para.Bussiness.csproj",
+        "projectUniqueName": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Bussiness\\Para.Bussiness.csproj",
         "projectName": "Para.Bussiness",
-        "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Bussiness\\Para.Bussiness.csproj",
+        "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Bussiness\\Para.Bussiness.csproj",
         "packagesPath": "C:\\Users\\KAPTAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Bussiness\\obj\\",
+        "outputPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Bussiness\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KAPTAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -228,11 +232,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Data\\Para.Data.csproj": {
-                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Data\\Para.Data.csproj"
+              "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Data\\Para.Data.csproj": {
+                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Data\\Para.Data.csproj"
               },
-              "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Schema\\Para.Schema.csproj": {
-                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Schema\\Para.Schema.csproj"
+              "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Schema\\Para.Schema.csproj": {
+                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Schema\\Para.Schema.csproj"
               }
             }
           }
@@ -275,6 +279,10 @@
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.8.1, )"
             }
           },
           "imports": [
@@ -297,14 +305,14 @@
         }
       }
     },
-    "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Data\\Para.Data.csproj": {
+    "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Data\\Para.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Data\\Para.Data.csproj",
+        "projectUniqueName": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Data\\Para.Data.csproj",
         "projectName": "Para.Data",
-        "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Data\\Para.Data.csproj",
+        "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Data\\Para.Data.csproj",
         "packagesPath": "C:\\Users\\KAPTAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Data\\obj\\",
+        "outputPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KAPTAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -321,8 +329,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\Para.Base.csproj": {
-                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\Para.Base.csproj"
+              "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\Para.Base.csproj": {
+                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\Para.Base.csproj"
               }
             }
           }
@@ -383,14 +391,14 @@
         }
       }
     },
-    "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Schema\\Para.Schema.csproj": {
+    "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Schema\\Para.Schema.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Schema\\Para.Schema.csproj",
+        "projectUniqueName": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Schema\\Para.Schema.csproj",
         "projectName": "Para.Schema",
-        "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Schema\\Para.Schema.csproj",
+        "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Schema\\Para.Schema.csproj",
         "packagesPath": "C:\\Users\\KAPTAN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Schema\\obj\\",
+        "outputPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Schema\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KAPTAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -407,8 +415,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\Para.Base.csproj": {
-                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\Para.Base.csproj"
+              "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\Para.Base.csproj": {
+                "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\Para.Base.csproj"
               }
             }
           }

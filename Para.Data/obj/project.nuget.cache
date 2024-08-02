@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uktfBqYGzDx7NS0n/uCtrZ4l6xVDBHJsIT15nY4Wd5mGJ9euTu+L4Gv3z2L5SzonXJQ4MMIK0vhb0TGUTk91Dg==",
+  "dgSpecHash": "eI0vaNfhlEP+TntMsxz172Q740qHOHYghxyi7URTLeyMwDMDESkwKvKqBSW1rgjneoGpdYO/odudb0QD+E8TQw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Data\\Para.Data.csproj",
+  "projectFilePath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Data\\Para.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KAPTAN\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\KAPTAN\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

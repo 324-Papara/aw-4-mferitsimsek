@@ -2496,6 +2496,23 @@
           }
         }
       },
+      "RabbitMQ.Client/6.8.1": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.5",
+          "System.Threading.Channels": "7.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/RabbitMQ.Client.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "runtime.native.System.Data.SqlClient.sni/4.6.0": {
         "type": "package",
         "dependencies": {
@@ -3196,7 +3213,7 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
-      "System.Memory/4.5.4": {
+      "System.Memory/4.5.5": {
         "type": "package",
         "compile": {
           "ref/netcoreapp2.1/_._": {}
@@ -3711,7 +3728,8 @@
           "MediatR": "9.0.0",
           "MediatR.Extensions.Microsoft.DependencyInjection": "9.0.0",
           "Para.Data": "1.0.0",
-          "Para.Schema": "1.0.0"
+          "Para.Schema": "1.0.0",
+          "RabbitMQ.Client": "6.8.1"
         },
         "compile": {
           "bin/placeholder/Para.Bussiness.dll": {}
@@ -8255,6 +8273,23 @@
         "pipelines.sockets.unofficial.nuspec"
       ]
     },
+    "RabbitMQ.Client/6.8.1": {
+      "sha512": "jNsmGgmCNw2S/NzskeN2ijtGywtH4Sk/G6jWUTD5sY9SrC27Xz6BsLIiB8hdsfjeyWCa4j4GvCIGkpE8wrjU1Q==",
+      "type": "package",
+      "path": "rabbitmq.client/6.8.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "icon.png",
+        "lib/net462/RabbitMQ.Client.dll",
+        "lib/net462/RabbitMQ.Client.xml",
+        "lib/netstandard2.0/RabbitMQ.Client.dll",
+        "lib/netstandard2.0/RabbitMQ.Client.xml",
+        "rabbitmq.client.6.8.1.nupkg.sha512",
+        "rabbitmq.client.nuspec"
+      ]
+    },
     "runtime.native.System.Data.SqlClient.sni/4.6.0": {
       "sha512": "WRq11dBcJYyAbrUVguvv3BqNGl5ub60mZxUd+xaxNsSOb7tMLQxjbiyD/hF6FSl1akiom7GMttPDa3TW+UmnAQ==",
       "type": "package",
@@ -9410,10 +9445,10 @@
         "useSharedDesignerContext.txt"
       ]
     },
-    "System.Memory/4.5.4": {
-      "sha512": "1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+    "System.Memory/4.5.5": {
+      "sha512": "XIWiDvKPXaTveaB7HVganDlOCRoj03l+jrwNvcge/t8vhGYKvqV+dMv6G4SAX2NoNmN0wZfVPTAlFwZcZvVOUw==",
       "type": "package",
-      "path": "system.memory/4.5.4",
+      "path": "system.memory/4.5.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -9427,7 +9462,7 @@
         "lib/netstandard2.0/System.Memory.dll",
         "lib/netstandard2.0/System.Memory.xml",
         "ref/netcoreapp2.1/_._",
-        "system.memory.4.5.4.nupkg.sha512",
+        "system.memory.4.5.5.nupkg.sha512",
         "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -10757,6 +10792,7 @@
       "Para.Bussiness >= 1.0.0",
       "Para.Data >= 1.0.0",
       "Para.Schema >= 1.0.0",
+      "RabbitMQ.Client >= 6.8.1",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -10766,11 +10802,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Api\\Para.Api.csproj",
+      "projectUniqueName": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Api\\Para.Api.csproj",
       "projectName": "Para.Api",
-      "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Api\\Para.Api.csproj",
+      "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Api\\Para.Api.csproj",
       "packagesPath": "C:\\Users\\KAPTAN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Api\\obj\\",
+      "outputPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\KAPTAN\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -10787,17 +10823,17 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\Para.Base.csproj": {
-              "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\Para.Base.csproj"
+            "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\Para.Base.csproj": {
+              "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\Para.Base.csproj"
             },
-            "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Bussiness\\Para.Bussiness.csproj": {
-              "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Bussiness\\Para.Bussiness.csproj"
+            "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Bussiness\\Para.Bussiness.csproj": {
+              "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Bussiness\\Para.Bussiness.csproj"
             },
-            "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Data\\Para.Data.csproj": {
-              "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Data\\Para.Data.csproj"
+            "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Data\\Para.Data.csproj": {
+              "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Data\\Para.Data.csproj"
             },
-            "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Schema\\Para.Schema.csproj": {
-              "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Schema\\Para.Schema.csproj"
+            "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Schema\\Para.Schema.csproj": {
+              "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Schema\\Para.Schema.csproj"
             }
           }
         }
@@ -10852,6 +10888,10 @@
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",
             "version": "[8.0.4, )"
+          },
+          "RabbitMQ.Client": {
+            "target": "Package",
+            "version": "[6.8.1, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",

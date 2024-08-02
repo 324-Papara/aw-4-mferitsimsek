@@ -2885,11 +2885,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\Para.Base.csproj",
+      "projectUniqueName": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\Para.Base.csproj",
       "projectName": "Para.Base",
-      "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\Para.Base.csproj",
+      "projectPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\Para.Base.csproj",
       "packagesPath": "C:\\Users\\KAPTAN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\obj\\",
+      "outputPath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\KAPTAN\\AppData\\Roaming\\NuGet\\NuGet.Config",

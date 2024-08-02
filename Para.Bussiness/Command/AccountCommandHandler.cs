@@ -4,6 +4,7 @@ using MediatR;
 using Para.Base.Response;
 using Para.Bussiness.Cqrs;
 using Para.Bussiness.Notification;
+using Para.Bussiness.RabbitMQ;
 using Para.Data.Domain;
 using Para.Data.UnitOfWork;
 using Para.Schema;
@@ -18,12 +19,14 @@ public class AccountCommandHandler :
     private readonly IUnitOfWork unitOfWork;
     private readonly IMapper mapper;
     private readonly INotificationService notificationService;
+    private readonly MailProducer mailProducer;
 
-    public AccountCommandHandler(IUnitOfWork unitOfWork, IMapper mapper,INotificationService notificationService)
+    public AccountCommandHandler(IUnitOfWork unitOfWork, IMapper mapper, INotificationService notificationService, MailProducer mailProducer)
     {
         this.unitOfWork = unitOfWork;
         this.mapper = mapper;
         this.notificationService = notificationService;
+        this.mailProducer = mailProducer;
     }
 
     public async Task<ApiResponse<AccountResponse>> Handle(CreateAccountCommand request, CancellationToken cancellationToken)
@@ -37,9 +40,14 @@ public class AccountCommandHandler :
         await unitOfWork.Complete();
 
         var customer = await unitOfWork.CustomerRepository.GetById(request.Request.CustomerId);
-        BackgroundJob.Schedule(() => 
-            SendEmail(customer.Email,$"{customer.FirstName} {customer.LastName}", request.Request.CurrencyCode),
-            TimeSpan.FromSeconds(30));
+        //BackgroundJob.Schedule(() => 
+        //    SendEmail(customer.Email,$"{customer.FirstName} {customer.LastName}", request.Request.CurrencyCode),
+        //    TimeSpan.FromSeconds(30));
+
+        mailProducer.QueueEmail(
+            subject: "Simsek Bank Hesap Acilisi",
+            email: customer.Email,
+            content: $"Sayýn {customer.FirstName} {customer.LastName}, {DateTime.Now} tarihinde Simsek Bank {request.Request.CurrencyCode} Mevduat Hesabýnýz Açýlmýþtýr.");
         
         
         var response = mapper.Map<AccountResponse>(saved);

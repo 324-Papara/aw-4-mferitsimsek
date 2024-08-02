@@ -1,32 +1,72 @@
+using Microsoft.Extensions.Configuration;
+using System.Net;
 using System.Net.Mail;
 
 namespace Para.Bussiness.Notification;
 
-public class NotificationService  : INotificationService
+public class NotificationService : INotificationService
 {
+    private readonly IConfiguration _configuration;
+
+    public NotificationService(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
+
     public void SendEmail(string subject, string email, string content)
     {
+        var smtpSettings = _configuration.GetSection("SmtpSettings");
+
+        // SMTP ayarlarýný kontrol edin
+        if (smtpSettings == null)
+        {
+            throw new ArgumentException("SMTP ayarlarý yapýlandýrýlmamýþ.");
+        }
+
+        if (string.IsNullOrEmpty(smtpSettings["Host"]) ||
+            string.IsNullOrEmpty(smtpSettings["Port"]) ||
+            string.IsNullOrEmpty(smtpSettings["Username"]) ||
+            string.IsNullOrEmpty(smtpSettings["Password"]) ||
+            string.IsNullOrEmpty(smtpSettings["From"]))
+        {
+            throw new ArgumentException("SMTP ayarlarýnda eksik deðerler var.");
+        }
+
         
-        SmtpClient mySmtpClient = new SmtpClient("my.smtp.exampleserver.net");
+        int port;
+        try
+        {
+            port = int.Parse(smtpSettings["Port"]);
+        }
+        catch (FormatException ex)
+        {
+            throw new ArgumentException("Geçersiz port numarasý.", ex);
+        }
 
-        mySmtpClient.UseDefaultCredentials = false;
-        System.Net.NetworkCredential basicAuthenticationInfo = new
-            System.Net.NetworkCredential("username", "password");
-        mySmtpClient.Credentials = basicAuthenticationInfo;
+        SmtpClient smtpClient = new SmtpClient(smtpSettings["Host"])
+        {
+            Port = port,
+            Credentials = new NetworkCredential(smtpSettings["Username"], smtpSettings["Password"]),
+            EnableSsl = true 
+        };
 
-        MailAddress from = new MailAddress("test@example.com", "TestFromName");
-        MailAddress to = new MailAddress(email, "TestToName");
-        MailMessage myMail = new System.Net.Mail.MailMessage(from, to);
-        MailAddress replyTo = new MailAddress("reply@example.com");
-        myMail.ReplyToList.Add(replyTo);
+        MailMessage mailMessage = new MailMessage
+        {
+            From = new MailAddress(smtpSettings["From"]),
+            Subject = subject,
+            Body = content,
+            IsBodyHtml = true
+        };
 
-        myMail.Subject = subject;
-        myMail.SubjectEncoding = System.Text.Encoding.UTF8;
+        mailMessage.To.Add(email);
 
-        myMail.Body = "<b>Test Mail</b><br>using <b>HTML</b>." + content;
-        myMail.BodyEncoding = System.Text.Encoding.UTF8;
-        myMail.IsBodyHtml = true;
-
-        mySmtpClient.Send(myMail);
+        try
+        {
+            smtpClient.Send(mailMessage);
+        }
+        catch (SmtpException ex)
+        {
+            Console.WriteLine($"Mail gönderimi baþarýsýz oldu: {ex.Message}");
+        }
     }
 }

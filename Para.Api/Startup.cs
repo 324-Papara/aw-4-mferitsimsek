@@ -1,28 +1,30 @@
-using System.Reflection;
-using System.Text;
-using System.Text.Json.Serialization;
 using AutoMapper;
 using FluentValidation.AspNetCore;
 using Hangfire;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Para.Api.Middleware;
 using Para.Api.Service;
 using Para.Base;
-using Para.Base.Log;
 using Para.Base.Token;
 using Para.Bussiness;
 using Para.Bussiness.Cqrs;
 using Para.Bussiness.Notification;
+using Para.Bussiness.RabbitMQ;
 using Para.Bussiness.Token;
 using Para.Bussiness.Validation;
 using Para.Data.Context;
+using Para.Data.Domain;
 using Para.Data.UnitOfWork;
 using Serilog;
 using StackExchange.Redis;
+using System.Reflection;
+using System.Text;
+using System.Text.Json.Serialization;
 
 namespace Para.Api;
 
@@ -129,16 +131,25 @@ public class Startup
             opt.ConfigurationOptions = redisConfig;
             opt.InstanceName = Configuration["Redis:InstanceName"];
         });
-        
-        
+
         services.AddHangfire(configuration => configuration
             .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
             .UseSimpleAssemblyNameTypeSerializer()
             .UseRecommendedSerializerSettings()
             .UseSqlServerStorage(Configuration.GetConnectionString("HangfireConnection")));
         services.AddHangfireServer();
-        
 
+        var rabbitMqSettings = Configuration.GetSection("RabbitMQ");
+        services.AddSingleton<RabbitMQClient>(rabbitmq => new RabbitMQClient(
+            rabbitMqSettings["HostName"],
+            int.Parse(rabbitMqSettings["Port"]),
+            rabbitMqSettings["UserName"],
+            rabbitMqSettings["Password"],
+            rabbitMqSettings["QueueName"]
+        ));
+        services.AddSingleton<MailProducer>();
+        services.AddSingleton<MailConsumer>();
+        services.AddControllersWithViews();
         services.AddScoped<ISessionContext>(provider =>
         {
             var context = provider.GetService<IHttpContextAccessor>();
@@ -149,7 +160,7 @@ public class Startup
         });
     }
 
-    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    public void Configure(IApplicationBuilder app, IServiceProvider service, IRecurringJobManager recurringJob, IWebHostEnvironment env)
     {
         if (env.IsDevelopment())
         {
@@ -170,9 +181,10 @@ public class Startup
             Log.Information("-------------Request-End------------");
         };
         app.UseMiddleware<RequestLoggingMiddleware>(requestResponseHandler);
-
         app.UseHangfireDashboard();
 
+        var mailConsumer = service.GetService<MailConsumer>();
+        recurringJob.AddOrUpdate("email-queue-listener", () => mailConsumer.StartListening(), "*/5 * * * * *");
         app.UseHttpsRedirection();
         app.UseAuthentication();
         app.UseRouting();

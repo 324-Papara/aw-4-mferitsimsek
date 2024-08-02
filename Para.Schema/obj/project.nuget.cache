@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bf+CuIiJ/aYDc7F5kFUp5ZfBbfOjxhT/eLfVLj8d81DOaw9mM07rWSN7z1K3te6cyjwwKMlvgMQgYJ1Hl0DJ/Q==",
+  "dgSpecHash": "oOVGQSmNMEvitND6j+J5tEbXJwAyoN/xXooqRAUaU+Opq52BbrMixthXpR2THGMFtE2gRwg+WdinDPNoGoCUQQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Schema\\Para.Schema.csproj",
+  "projectFilePath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Schema\\Para.Schema.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KAPTAN\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\KAPTAN\\.nuget\\packages\\entityframework\\6.3.0\\entityframework.6.3.0.nupkg.sha512",

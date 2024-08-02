@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tVgDTDYyaxT8oFznR1/nTaGTGOZbTv7xdozWfIJ/grIhYrMSzYC1ysmQk4xSbl5cfI7JV2l9Nyo8X6AHxfLPdw==",
+  "dgSpecHash": "kUKiucnwtiv9z7hoYuPeS66sQp3Lm7qxNgIr2oJsCKAho6cETs6VvnceM3VaFuwDPej3+R0IYz1kX6i86HXQTQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\KAPTAN\\source\\repos\\pk-ppr\\Para.Api\\Para.Base\\Para.Base.csproj",
+  "projectFilePath": "C:\\Users\\KAPTAN\\source\\repos\\mferitsimsek\\PaparaBootcampClassRoom\\week4\\Para.Base\\Para.Base.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\KAPTAN\\.nuget\\packages\\entityframework\\6.3.0\\entityframework.6.3.0.nupkg.sha512",
     "C:\\Users\\KAPTAN\\.nuget\\packages\\linqkit\\1.2.4\\linqkit.1.2.4.nupkg.sha512",
